@@ -48,7 +48,7 @@
                     @csrf
                     <label for="song">Choose a song:</label>
                     <select name="song" id="song">
-                        @foreach($allSongs->songs as $song)
+                    @foreach($playlist->songs as $song)
                             <option value="{{ $song->id }}">{{ $song->title }}</option>
                         @endforeach
                     </select>
@@ -56,6 +56,7 @@
                         Add
                     </button>
                 </form>
+                
             </div>
         </div>
     </div>
