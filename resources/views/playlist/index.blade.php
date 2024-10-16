@@ -48,6 +48,8 @@
         }
     </style>
 
+    <h1>Playlists</h1>
+
     <div class="flex justify-end mb-4">
         <a href="{{ route('playlist.create') }}" class="button">
             <div class="button-overlay"></div>
@@ -57,7 +59,7 @@
         </a>
     </div>
     <div class="gap-6">
-        @foreach ($playlists as $playlist)
+        @forelse ($playlists as $playlist)
         <div class="w-full rounded overflow-hidden shadow-lg p-4 bg-white mb-4">
             <div class="flex justify-between">
                 <div>       
@@ -98,6 +100,8 @@
                 </table>
             </div>
         </div>
-        @endforeach
+        @empty
+            <p>No Playlists found.</p>
+        @endforelse
     </div>
 </x-app-layout>

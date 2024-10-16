@@ -85,7 +85,7 @@ class SongController extends Controller
         ]);
     }
 
-    return redirect('/song'); //--------------Šo vajadzēs samainīt!!!!!!
+    return redirect('/song'); 
     }
 
     /**
